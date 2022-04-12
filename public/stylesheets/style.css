@@ -2,7 +2,10 @@
   --primary: black;
   --secondary: white;
   --tertiary: rgb(120, 120, 200);
-  --quaternary: rgb(160, 160, 160);
+  --quaternary: rgb(200, 200, 200);
+}
+body {
+  background-color: var(--quaternary);
 }
 header {
   background-color: var(--primary);
@@ -10,11 +13,16 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 h1 {
   color: var(--secondary);
   font-size: 3rem;
   margin: 10px 20px;
+}
+h4 {
+  font-size: 1.75rem;
+  font-weight: normal;
 }
 h6 {
   color: var(--secondary);
@@ -40,16 +48,38 @@ nav button:hover {
 }
 main {
   min-height: 100%;
-  min-width: 100%;
-  background-color: var(--quaternary);
-}
-ul {
-  list-style: none;
 }
 .post {
-  margin: 25px 0px;
-  border: 1px solid var(--primary);
+  margin: 20px 0px;
+  border: 2px solid var(--primary);
+}
+.post-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+}
+.post-info h4 {
+  margin-left: 10px;
+}
+.post-info h4 a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+.post-info h4 a:hover {
+  color: var(--tertiary);
+}
+.post-info span {
+  color: var(--secondary);
+  font-size: 1rem;
+  margin-right: 10px;
+}
+.post-text {
   padding: 10px;
+}
+.post-text p {
+  font-size: 1.25rem;
 }
 footer {
   background-color: var(--primary);
