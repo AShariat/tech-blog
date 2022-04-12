@@ -20,6 +20,10 @@ h1 {
   font-size: 3rem;
   margin: 10px 20px;
 }
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
 h4 {
   font-size: 1.5rem;
   font-weight: normal;
@@ -49,37 +53,52 @@ nav button:hover {
 main {
   min-height: 100%;
 }
-.post {
+.posts {
   margin: 20px 0px;
   border: 2px solid var(--primary);
 }
-.post-info {
+.posts-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: var(--primary);
 }
-.post-info h4 {
+.posts-info h4 {
   margin-left: 10px;
 }
-.post-info h4 a {
+.posts-info h4 a {
   text-decoration: none;
   color: var(--secondary);
 }
-.post-info h4 a:hover {
+.posts-info h4 a:hover {
   color: var(--tertiary);
 }
-.post-info span {
+.posts-info span {
   color: var(--secondary);
   font-size: 1rem;
   margin-right: 10px;
 }
-.post-text {
+.posts-text {
   padding: 10px;
 }
-.post-text p {
+.posts-text p {
   font-size: 1.25rem;
+}
+.post-title {
+  text-align: center;
+  margin: 25px 0px 50px;
+}
+.post-title span {
+  font-size: 2.5rem;
+}
+.post-info {
+  font-style: italic;
+}
+.post-text {
+  font-size: 1.5rem;
+  line-height: 2.5;
+  text-align: justify;
 }
 footer {
   background-color: var(--primary);
