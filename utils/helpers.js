@@ -11,7 +11,7 @@ module.exports = {
     return word;
   },
   format_length: (str) => {
-    const first50 = str.slice(0, 200);
-    return first50;
+    const formatedText = str.slice(0, 200);
+    return formatedText + "...";
   },
 };
