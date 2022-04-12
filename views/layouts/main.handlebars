@@ -21,7 +21,6 @@
       <nav>
         {{#if loggedIn}}
           <a href="/dashboard" class="navbar">Dashboard</a>
-          {{! Since logout won’t be an actual page that users can visit, it should be a button, but we can still style it to look like a link. }}
           <button id="logout" class="navbar">Logout</button>
         {{else}}
           <a href="/login" class="navbar">Login</a>
@@ -31,9 +30,9 @@
     <main class="container">
       {{{body}}}
     </main>
-    {{!-- {{#if loggedIn}}
+    {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
-    {{/if}} --}}
+    {{/if}}
   </body>
 
 </html>
