@@ -23,7 +23,6 @@ router.get("/:id", (req, res) => {
         model: Post,
         attributes: ["id", "title", "post_text", "created_at"],
       },
-      // include the Comment model here:
       {
         model: Comment,
         attributes: ["id", "comment_text", "created_at"],
@@ -36,7 +35,7 @@ router.get("/:id", (req, res) => {
   })
     .then((dbUserData) => {
       if (!dbUserData) {
-        res.status(404).json({ message: "No user found with this id" });
+        res.status(404).json({ message: "No User Found With This ID!" });
         return;
       }
       res.json(dbUserData);
@@ -74,19 +73,21 @@ router.post("/login", (req, res) => {
     },
   }).then((dbUserData) => {
     if (!dbUserData) {
-      res.status(400).json({ message: "No user with that email address!" });
+      res
+        .status(400)
+        .json({ message: "No User Found With This Email Address!" });
       return;
     }
     const validPassword = dbUserData.checkPassword(req.body.password);
     if (!validPassword) {
-      res.status(400).json({ message: "Incorrect password!" });
+      res.status(400).json({ message: "Incorrect Password!" });
       return;
     }
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
-      res.json({ user: dbUserData, message: "You are now logged in!" });
+      res.json({ user: dbUserData, message: "You Are Now Logged In!" });
     });
   });
 });
@@ -110,7 +111,7 @@ router.put("/:id", (req, res) => {
   })
     .then((dbUserData) => {
       if (!dbUserData[0]) {
-        res.status(404).json({ message: "No user found with this id" });
+        res.status(404).json({ message: "No User Found With This ID!" });
         return;
       }
       res.json(dbUserData);
@@ -129,7 +130,7 @@ router.delete("/:id", (req, res) => {
   })
     .then((dbUserData) => {
       if (!dbUserData) {
-        res.status(404).json({ message: "No user found with this id" });
+        res.status(404).json({ message: "No User Found With This ID!" });
         return;
       }
       res.json(dbUserData);
