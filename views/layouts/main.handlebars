@@ -15,21 +15,26 @@
 
   <body>
     <header>
-      <h1>
-        <a href="/">Tech Blog</a>
-      </h1>
-      <nav>
+      <nav class="row mx-3">
+        <a href="/" class="col mx-1">Home</a>
         {{#if loggedIn}}
-          <a href="/dashboard" class="navbar">Dashboard</a>
-          <button id="logout" class="navbar">Logout</button>
+          <a href="/dashboard" class="col mx-1">Dashboard</a>
+          <button id="logout" class="col mx-1">Logout</button>
         {{else}}
-          <a href="/login" class="navbar">Login</a>
+          <a href="/login" class="col mx-1">Login</a>
         {{/if}}
       </nav>
+      <h1>
+        Tech Blog
+      </h1>
     </header>
     <main class="container">
       {{{body}}}
     </main>
+    <footer>
+      <h6>Created By
+        <a href="https://github.com/AShariat" target="_blank">Amir</a></h6>
+    </footer>
     {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
     {{/if}}

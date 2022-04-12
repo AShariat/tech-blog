@@ -1,31 +1,67 @@
+:root {
+  --primary: black;
+  --secondary: white;
+  --tertiary: rgb(120, 120, 200);
+  --quaternary: rgb(160, 160, 160);
+}
 header {
-  background-color: black;
+  background-color: var(--primary);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 h1 {
+  color: var(--secondary);
+  font-size: 3rem;
   margin: 10px 20px;
 }
-h1 a {
-  color: white;
-  font-size: 3rem;
+h6 {
+  color: var(--secondary);
+  font-size: 1rem;
+  padding: 5px 0px;
 }
-nav {
-  margin: 0px 20px;
-}
-.navbar {
-  color: white;
+nav a {
+  color: var(--secondary);
   font-size: 1.5rem;
-}
-a {
   text-decoration: none;
+}
+nav a:hover {
+  color: var(--tertiary);
+}
+nav button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+nav button:hover {
+  color: var(--tertiary);
+}
+main {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: var(--quaternary);
 }
 ul {
   list-style: none;
 }
-main {
-  min-height: 100%;
+.post {
+  margin: 25px 0px;
+  border: 1px solid var(--primary);
+  padding: 10px;
+}
+footer {
+  background-color: var(--primary);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+h6 a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+h6 a:hover {
+  color: var(--tertiary);
 }
