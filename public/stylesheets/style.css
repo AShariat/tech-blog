@@ -3,6 +3,7 @@
   --secondary: white;
   --tertiary: rgb(120, 120, 200);
   --quaternary: rgb(200, 200, 200);
+  --quinary: rgb(220, 220, 220);
 }
 body {
   background-color: var(--quaternary);
@@ -116,8 +117,8 @@ main {
   align-items: flex-start;
   flex-wrap: wrap;
 }
-.comment-text {
-  background-color: var(--secondary);
+.comment {
+  background-color: var(--quinary);
   padding: 10px;
   margin: 20px 0px;
 }

@@ -10,8 +10,8 @@ const userData = [
   },
   {
     id: "2",
-    username: "Rezvan",
-    email: "rezvan@test.com",
+    username: "Joojoo",
+    email: "joojoo@test.com",
     password: "123456",
   },
   {
