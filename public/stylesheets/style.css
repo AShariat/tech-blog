@@ -100,6 +100,14 @@ main {
   line-height: 2.5;
   text-align: justify;
 }
+.form-button {
+  background-color: var(--primary);
+  color: var(--secondary);
+  width: 100px;
+}
+.form-button:hover {
+  transform: scale(1.025);
+}
 footer {
   background-color: var(--primary);
   display: flex;
