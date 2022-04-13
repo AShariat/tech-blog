@@ -1,0 +1,31 @@
+<article class="row my-5 d-flex justify-content-center">
+  <div class="col-12 mb-5">
+  <a href="/dashboard" class="links">&larr; Back To Dashboard</a>
+  </div>
+  <h2>Edit Post</h2>
+  <form class="edit-post-form col-12 my-5">
+    <div class="col-12">
+      <label for="edit-post-title" class="form-label">Post Title</label>
+      <textarea name="edit-post-title" class="form-control mb-2">{{post.title}}</textarea>
+      <label for="edit-post-text" class="form-label">Post Text</label>
+      <textarea name="edit-post-text" class="form-control mb-2">{{post.post_text}}</textarea>
+    </div>
+    <button type="submit" class="form-button">Save Post</button>
+    <button type="button" class="delete-post form-button">Delete Post</button>
+  </form>
+</article>
+<div class="comments col-12">
+  <h5>Add Comment:</h5>
+  <form id="new-comment">
+      <textarea name="comment-body" class="form-control mb-2"></textarea>
+    <div class="col-12">
+      <button type="submit" class="form-button">Submit</button>
+    </div>
+  </form>
+</div>
+{{#if post.comments.length}}
+  {{> comments post.comments}}
+{{/if}}
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>

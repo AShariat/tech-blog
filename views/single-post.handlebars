@@ -1,0 +1,36 @@
+<article class="row">
+  <div class="post-title">
+  <h3>
+    {{post.title}}
+  </h3>
+  <span>&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;&ast;</span>
+  </div>
+  <p class="post-info">
+    &lt; Posted by
+    {{post.user.username}}
+    on
+    {{format_date post.created_at}} &gt;
+  </p>
+  <p class="post-text">{{post.post_text}}</p>
+{{#if loggedIn}}
+<div class="comments col-12">
+  <h5>Add Comment:</h5>
+  <form id="new-comment">
+      <textarea name="comment-body" class="form-control mb-2"></textarea>
+    <div class="col-12">
+      <button type="submit" class="form-button">Submit</button>
+    </div>
+  </form>
+</div>
+  {{else}}
+    <div class="comments col-12">
+      <p>You Must <a href="/login">Login</a> to Leave Comments!</p>
+    </div>
+{{/if}}
+{{#if post.comments.length}}
+  {{> comments post.comments}}
+{{/if}}
+</article>
+{{#if loggedIn}}
+  <script src="/javascript/comment.js"></script>
+{{/if}}

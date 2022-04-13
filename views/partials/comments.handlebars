@@ -1,0 +1,11 @@
+<div class="comments col-12">
+  <h5>Comments:</h5>
+  {{#each this}}
+    <div class="comment">
+      {{comment_text}}
+      ({{user.username}}
+      on
+      {{format_date created_at}})
+    </div>
+  {{/each}}
+</div>

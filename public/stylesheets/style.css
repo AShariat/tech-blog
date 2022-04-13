@@ -1,0 +1,157 @@
+:root {
+  --primary: black;
+  --secondary: white;
+  --tertiary: rgb(120, 120, 200);
+  --quaternary: rgb(200, 200, 200);
+  --quinary: rgb(220, 220, 220);
+}
+body {
+  background-color: var(--quaternary);
+}
+header {
+  background-color: var(--primary);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 9999;
+}
+h1 {
+  color: var(--secondary);
+  font-size: 3rem;
+  margin: 10px 20px;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+h6 {
+  color: var(--secondary);
+  font-size: 1rem;
+  padding: 5px 0px;
+}
+nav a {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+nav a:hover {
+  color: var(--tertiary);
+}
+nav button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+nav button:hover {
+  color: var(--tertiary);
+}
+main {
+  min-height: 100%;
+}
+.posts {
+  margin: 20px 0px;
+  border: 2px solid var(--primary);
+}
+.posts-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+}
+.posts-info h4 {
+  margin-left: 10px;
+}
+.posts-info h4 a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+.posts-info h4 a:hover {
+  color: var(--tertiary);
+}
+.posts-info span {
+  color: var(--secondary);
+  font-size: 1rem;
+  margin-right: 10px;
+}
+.posts-text {
+  padding: 10px;
+}
+.posts-text p {
+  font-size: 1.25rem;
+}
+.post-title {
+  text-align: center;
+  margin: 25px 0px 50px;
+}
+.post-title span {
+  font-size: 2.5rem;
+}
+.post-info {
+  font-style: italic;
+}
+.post-text {
+  font-size: 1.5rem;
+  line-height: 2.5;
+  text-align: justify;
+}
+.comments {
+  margin: 20px 0px;
+  border: 1px solid var(--primary);
+  padding: 10px;
+}
+#new-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.comment {
+  background-color: var(--quinary);
+  padding: 10px;
+  margin: 20px 0px;
+}
+.form-button {
+  background-color: var(--primary);
+  color: var(--secondary);
+  width: 100px;
+  margin: 5px;
+}
+.form-button:hover {
+  transform: scale(1.025);
+}
+.links {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+  text-decoration: none;
+}
+.links:hover {
+  color: var(--tertiary);
+}
+footer {
+  background-color: var(--primary);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+h6 a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+h6 a:hover {
+  color: var(--tertiary);
+}
