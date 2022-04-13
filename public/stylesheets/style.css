@@ -126,6 +126,7 @@ main {
   background-color: var(--primary);
   color: var(--secondary);
   width: 100px;
+  margin-top: 10px;
 }
 .form-button:hover {
   transform: scale(1.025);
