@@ -11,10 +11,11 @@
       <textarea name="edit-post-text" class="form-control mb-2">{{post.post_text}}</textarea>
     </div>
     <button type="submit" class="form-button">Save Post</button>
-    <button type="button" class="form-button">Delete Post</button>
+    <button type="button" class="delete-post form-button">Delete Post</button>
   </form>
 </article>
 <div class="comments col-12">
+  <h5>Add Comment:</h5>
   <form id="new-comment">
       <textarea name="comment-body" class="form-control mb-2"></textarea>
     <div class="col-12">
@@ -26,5 +27,5 @@
   {{> comments post.comments}}
 {{/if}}
 <script src="/javascript/edit-post.js"></script>
-{{!-- <script src="/javascript/delete-post.js"></script> --}}
+<script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>
