@@ -11,23 +11,23 @@
     on
     {{format_date post.created_at}} &gt;
   </p>
-  <p class="post-text">{{post.post_text}}
-    |
-    {{post.comments.length}}
-    {{format_plural "Comment" post.comments.length}}
-  </p>
-</article>
+  <p class="post-text">{{post.post_text}}</p>
 {{#if loggedIn}}
-  <form class="comment-form">
-    <div>
-      <textarea name="comment-body"></textarea>
-    </div>
-    <div>
-      <button type="submit">Add Comment</button>
+<div class="comments col-12">
+  <form id="new-comment" class="form-floating">
+      <textarea name="comment-body" class="form-control mb-2" placeholder="Say Something Nice!"></textarea>
+    <div class="col-12">
+      <button type="submit" class="form-button">Submit</button>
     </div>
   </form>
+</div>
+  {{else}}
+    <div class="comments col-12">
+      <p>You Must <a href="/login">Login</a> to Leave Comments!</p>
+    </div>
 {{/if}}
 {{> comments post.comments}}
+</article>
 {{#if loggedIn}}
   <script src="/javascript/comment.js"></script>
 {{/if}}

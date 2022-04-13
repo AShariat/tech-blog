@@ -38,6 +38,7 @@ router.get("/post/:id", (req, res) => {
       id: req.params.id,
     },
     attributes: ["id", "title", "post_text", "created_at"],
+    order: [[Comment, "id", "DESC"]],
     include: [
       {
         model: Comment,

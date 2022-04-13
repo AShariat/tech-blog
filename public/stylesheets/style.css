@@ -100,6 +100,23 @@ main {
   line-height: 2.5;
   text-align: justify;
 }
+.comments {
+  margin: 20px 0px;
+  border: 1px solid var(--primary);
+  padding: 10px;
+}
+#new-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.comment-text {
+  background-color: var(--secondary);
+  padding: 10px;
+  margin: 20px 0px;
+}
 .form-button {
   background-color: var(--primary);
   color: var(--secondary);
