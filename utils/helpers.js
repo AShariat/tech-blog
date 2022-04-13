@@ -10,6 +10,10 @@ module.exports = {
     }
     return word;
   },
+  format_length_title: (str) => {
+    const formatedText = str.slice(0, 70);
+    return formatedText + "...";
+  },
   format_length: (str) => {
     const formatedText = str.slice(0, 200);
     return formatedText + "...";
