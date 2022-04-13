@@ -22,7 +22,6 @@ router.get("/", (req, res) => {
     ],
   })
     .then((dbPostData) => {
-      // The data that Sequelize returns is actually a Sequelize object with a lot more information attached to it than you might have been expecting. To serialize the object down to only the properties we need, we use Sequelize's get() method.
       const posts = dbPostData.map((post) => post.get({ plain: true }));
       res.render("homepage", { posts, loggedIn: req.session.loggedIn });
     })
