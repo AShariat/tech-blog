@@ -3,7 +3,7 @@
   <a href="/dashboard" class="links">&larr; Back To Dashboard</a>
   </div>
   <h2>Edit Post</h2>
-  <form class="col-12 my-5">
+  <form class="edit-post-form col-12 my-5">
     <div class="col-12">
       <label for="edit-post-title" class="form-label">Post Title</label>
       <textarea name="edit-post-title" class="form-control mb-2">{{post.title}}</textarea>
@@ -25,6 +25,6 @@
 {{#if post.comments.length}}
   {{> comments post.comments}}
 {{/if}}
-{{!-- <script src="/javascript/edit-post.js"></script>
-<script src="/javascript/delete-post.js"></script> --}}
+<script src="/javascript/edit-post.js"></script>
+{{!-- <script src="/javascript/delete-post.js"></script> --}}
 <script src="/javascript/comment.js"></script>
