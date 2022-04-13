@@ -1,6 +1,6 @@
-<section class="row my-5 d-flex justify-content-center">
+<section class="row mt-5 d-flex justify-content-center">
   <h2>Create New Post</h2>
-  <form class="col-12 my-5">
+  <form id="new-post-form" class="col-12 my-5">
     <div class="col-12">
       <label for="new-post-title" class="form-label">Post Title</label>
       <textarea name="new-post-title" class="form-control mb-2"></textarea>
@@ -13,14 +13,14 @@
   </form>
 </section>
 {{#if posts.length}}
-<section class="row my-5 d-flex justify-content-center">
+<section class="row mt-3 d-flex justify-content-center">
   <h2>Your Posts</h2>
     {{#each posts as |post|}}
       <div class="col-12 my-3">
         {{> post-info post}}
-        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
+        <a href="/dashboard/edit/{{post.id}}" class="links">Edit Post &rarr;</a>
       </div>
     {{/each}}
 </section>
 {{/if}}
-{{!-- <script src="/javascript/add-post.js"></script> --}}
+<script src="/javascript/add-post.js"></script>
