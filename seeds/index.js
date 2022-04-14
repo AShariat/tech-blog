@@ -7,13 +7,13 @@ const seedAll = async () => {
   await sequelize.sync({ force: true });
 
   await seedUsers();
-  console.log("--------------");
+  console.log("--------------------");
 
   await seedPosts();
-  console.log("--------------");
+  console.log("--------------------");
 
   await seedComments();
-  console.log("--------------");
+  console.log("--------------------");
 
   console.log("Tech Blog SEEDED!");
 
