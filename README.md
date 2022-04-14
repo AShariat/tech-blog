@@ -8,14 +8,20 @@ If you are a fan of new technologies and are willing to share what you know abou
 
 ## Table of Contents
 
+- [Demo](#demo)
 - [Usage](#usage)
 - [License](#license)
 - [Contribution](#contribution)
 - [Questions](#questions)
 
+## Demo
+![tech-blog](https://user-images.githubusercontent.com/88262115/163292216-2f44acce-b7ab-4304-a5aa-1a9878fe779e.jpg)
+
+
 ## Usage
 
 Just open this live link to the web app and enjoy it:
+[Tech Blog](https://amir-tech-blog.herokuapp.com/)
 
 ## License
 
